@@ -5,26 +5,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Login com Google</title>
 
-  <!-- Script do Google Identity Services -->
   <script src="https://accounts.google.com/gsi/client" async defer></script>
-
-  <!-- Estilos personalizados -->
   <link rel="stylesheet" href="login.css" />
 </head>
 <body>
   <div class="login-container">
-    <!-- Logo da empresa -->
     <img src="assets/logo.svg" alt="Logo da Empresa" class="logo" />
 
-    <!-- Texto de boas-vindas -->
     <h2>Autenticação</h2>
     <p>Use sua conta <strong>@queonetics.com</strong> para continuar.</p>
 
-    <!-- Botão de login Google -->
-    <div id="g_id_signin"></div>
+    <!-- Google Identity Services (inicialização + botão) -->
+    <div id="g_id_onload"
+         data-client_id="920466326948-i8k3q86e57ajlthgpj4i8pb6ge2vesif.apps.googleusercontent.com"
+         data-callback="handleCredentialResponse"
+         data-auto_prompt="false">
+    </div>
+
+    <div class="g_id_signin"
+         data-type="standard"
+         data-theme="outline"
+         data-text="signin_with"
+         data-shape="pill"
+         data-logo_alignment="left">
+    </div>
   </div>
 
-  <!-- Script personalizado -->
   <script src="login.js"></script>
 </body>
 </html>
