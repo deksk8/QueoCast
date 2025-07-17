@@ -1,9 +1,9 @@
-// const allowedDomain = "queonetics.com";
-// const savedEmail = localStorage.getItem("userEmail");
+const allowedDomain = "queonetics.com";
+const savedEmail = localStorage.getItem("userEmail");
 
-// if (!savedEmail || !savedEmail.endsWith("@" + allowedDomain)) {
-//   window.location.href = "login.html";
-// }
+if (!savedEmail || !savedEmail.endsWith("@" + allowedDomain)) {
+  window.location.href = "login.html";
+}
 
 
 console.log("Versão atual do script carregada");
