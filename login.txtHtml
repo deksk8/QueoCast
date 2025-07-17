@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head><head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login com Google</title>
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+  <link rel="stylesheet" href="login.css" />
+</head>
+<body>
+  <div class="login-container">
+    <!-- Logo da empresa -->
+    <img src="assets/logo.svg" alt="Logo da Empresa" class="logo" />
+
+    <!-- Texto de boas-vindas -->
+    <h2>Autenticação</h2>
+    <p>Use sua conta <strong>@queonetics.com</strong> para continuar.</p>
+
+    <!-- Botão de login Google -->
+    <div id="g_id_signin"></div>
+  </div>
+
+  <script src="login.js"></script>
+</body>
+</html>

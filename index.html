@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Queo Cast Comercial</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="light-mode">
+    <button id="mode-toggle" title="Alternar tema">🌙</button>
+  <div class="container">
+
+    <!-- Lado Esquerdo: Player -->
+    <div class="player-section">
+      <img src="/assets/logoCast.png" alt="Logo do Podcast" class="player-banner" />
+      <div class="player-card">
+        <header>
+          <h2 id="episode-title">Nenhum episódio carregado</h2>
+        </header>
+
+        <div class="subtitle">Subtítulo ou descrição curta</div>
+
+        <audio id="audio-player" src="" type="audio/mpeg"></audio>
+
+        <div class="progress-bar-container">
+          <div class="progress-bar"></div>
+        </div>
+
+        <div class="time-info">
+          <span id="current-time">00:00</span>
+          <span id="duration">00:00</span>
+        </div>
+
+        <div class="controls">
+          <button id="skip-back" title="Anterior">&#x23EE;&#xFE0E;</button>
+          <button id="rewind" title="Voltar 10s">&#x21ba;15</button>
+          <button id="play-pause" title="Tocar/Pausar">&#x25B6;</button>
+          <button id="forward" title="Avançar 10s">30&#x21bb;</button>
+          <button id="skip-next" title="Próximo">&#x23ED;&#xFE0E;</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Lado Direito: Lista de Episódios -->
+    <div class="episode-list">
+      <h3>Episódios</h3>
+      <ul id="episodes"></ul>
+    </div>
+  </div>
+
+  <script src="script.js?v=123"></script>
+</body>
+</html>
