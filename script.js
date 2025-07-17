@@ -22,11 +22,18 @@ document.addEventListener('DOMContentLoaded', () => {
     const durationSpan = document.getElementById('duration');
     const episodesList = document.getElementById('episodes');
     const modeToggleButton = document.getElementById('mode-toggle');
-    const body = document.body;
+    const volumeControl = document.getElementById('volume-control');
+
+
 
     let currentEpisodeIndex = -1;
     let isPlaying = false;
     let episodes = [];
+
+    // Define volume inicial
+    audioPlayer.volume = 0.5;
+    volumeControl.value = audioPlayer.volume;
+    const body = document.body;
 
     const progressIndicator = document.createElement('div');
     progressIndicator.classList.add('progress-indicator');
@@ -158,6 +165,11 @@ document.addEventListener('DOMContentLoaded', () => {
     progressIndicator.addEventListener('mousedown', (e) => {
         isDragging = true;
         e.preventDefault();
+    });
+
+    // Atualiza o volume com base no input
+    volumeControl.addEventListener('input', () => {
+        audioPlayer.volume = volumeControl.value;
     });
 
     document.addEventListener('mouseup', () => {

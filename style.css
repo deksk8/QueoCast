@@ -193,6 +193,13 @@ body.dark-mode .progress-bar-container {
     background-color: var(--button-hover);
 }
 
+#volume-control {
+    width: 100px;
+    margin-left: 10px;
+    accent-color: var(--accent-color);
+}
+
+
 /* Lado direito: playlist */
 .episode-list {
     width: 320px;
